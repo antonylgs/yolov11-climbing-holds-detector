@@ -1,8 +1,8 @@
 # Issue Tracker
 
-Local issue tracker. One file per issue; frontmatter holds `status` (open/in-progress/done), `labels` (`ready-for-agent` = AFK-implementable, `needs-human` = owner must act), `blocked_by`.
+Local issue tracker. One file per issue; frontmatter holds `status` (open/in-progress/ready-for-human-verification/done), `labels` (`ready-for-agent` = AFK-implementable, `needs-human` = owner must act), `blocked_by`.
 
-Agents: pick the lowest-numbered `open` + `ready-for-agent` issue whose blockers are all `done`. Set `status: in-progress` while working, `done` when merged. Source spec: `../../PRD.md`.
+Agents: pick the lowest-numbered `open` + `ready-for-agent` issue whose blockers are all `done`. Set `status: in-progress` while working, `done` when merged. Issues 004, 007, 009 contain a "Human touchpoint" section: complete all agent-doable criteria, leave criteria marked **(HUMAN: …)** unchecked, and set `status: ready-for-human-verification` instead of `done` — the owner closes them. Source spec: `../../PRD.md`.
 
 ## Board
 

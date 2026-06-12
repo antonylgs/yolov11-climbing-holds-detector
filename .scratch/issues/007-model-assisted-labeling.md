@@ -15,10 +15,14 @@ Also write `docs/labeling-rules.md` — the consistency contract for all labelin
 ## Acceptance criteria
 
 - [ ] `scripts/preannotate.py <folder> --model <weights>` emits valid YOLO-seg labels for every image
-- [ ] Output verified importable into a Roboflow annotation project (document the upload steps)
+- [ ] Output verified importable into a Roboflow annotation project **(HUMAN: needs owner's Roboflow account — agent documents the upload steps, owner does one test upload)**
 - [ ] Configurable confidence threshold, default lower than inference default
 - [ ] `docs/labeling-rules.md` exists and covers the cases above
 - [ ] Unit test: label-file format correctness on fixture image + fixture weights
+
+## Human touchpoint
+
+The Roboflow import check requires the owner's account. Complete everything else (script, format-valid labels, upload doc, tests), then set `status: ready-for-human-verification`; the owner confirms one upload before this closes.
 
 ## Blocked by
 

@@ -17,9 +17,13 @@ Final polish pass using the retrained model and real gym photos from 008:
 ## Acceptance criteria
 
 - [ ] CLI default confidence threshold justified by a recorded sweep
-- [ ] Color naming ≥ 90% correct on the 50-hold checked sample; sample + results committed
+- [ ] Color naming ≥ 90% correct on the 50-hold checked sample; sample + results committed **(HUMAN: ground truth comes from the owner's eyes — agent prepares the sample sheet, owner marks correct/incorrect)**
 - [ ] New color edge cases covered by unit tests
 - [ ] README enables a fresh user to go from clone → JSON output without reading other docs
+
+## Human touchpoint
+
+Color accuracy needs human ground truth. Agent: build a review sheet (crops of ~50 detected holds + predicted color names, randomized across photos/colors), then set `status: ready-for-human-verification`. Owner marks each correct/incorrect; if < 90%, agent iterates on the hue table with the marked sheet as test data.
 
 ## Blocked by
 

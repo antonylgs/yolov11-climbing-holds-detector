@@ -15,9 +15,13 @@ blocked_by: [003]
 ## Acceptance criteria
 
 - [ ] `uv run scripts/train.py --data tests/fixtures/.../dataset.yaml --epochs 2 --imgsz 320` completes locally on MPS/CPU and produces a `best.pt`
-- [ ] Same script runs unmodified on Colab CUDA
-- [ ] Notebook is self-contained: fresh Colab session → trained weights on Drive, with resume-from-checkpoint cell
+- [ ] Same script runs unmodified on Colab CUDA **(HUMAN: verified by owner during issue 005's training run)**
+- [ ] Notebook is self-contained: fresh Colab session → trained weights on Drive, with resume-from-checkpoint cell **(HUMAN: same — agent verifies notebook structure only)**
 - [ ] Defaults match PRD §4 (yolo11s-seg, imgsz 1280, single class)
+
+## Human touchpoint
+
+Agents cannot execute Colab (needs owner's Google account). Complete all local criteria, then set `status: ready-for-human-verification` and leave the two HUMAN criteria unchecked — they get checked off as part of 005.
 
 ## Blocked by
 
