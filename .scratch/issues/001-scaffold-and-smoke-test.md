@@ -2,7 +2,7 @@
 id: 001
 title: Scaffold project + pretrained segmentation smoke test
 labels: [ready-for-agent]
-status: open
+status: done
 blocked_by: []
 ---
 
@@ -14,10 +14,10 @@ Set up the Python project so a pretrained YOLO segmentation model runs end-to-en
 
 ## Acceptance criteria
 
-- [ ] `uv sync` from a clean clone installs everything; `ultralytics`, `opencv-python`, `numpy` importable
-- [ ] `uv run pytest` passes, including a smoke test that runs pretrained yolo11n-seg on the fixture image (CPU/MPS, no GPU)
-- [ ] Annotated output image is produced to a gitignored location
-- [ ] `ruff check` passes; repo layout matches PRD §5
+- [x] `uv sync` from a clean clone installs everything; `ultralytics`, `opencv-python`, `numpy` importable
+- [x] `uv run pytest` passes, including a smoke test that runs pretrained yolo11n-seg on the fixture image (CPU/MPS, no GPU)
+- [x] Annotated output image is produced to a gitignored location (`data/outputs/smoke_annotated.jpg`)
+- [x] `ruff check` passes; repo layout matches PRD §5
 
 ## Blocked by
 

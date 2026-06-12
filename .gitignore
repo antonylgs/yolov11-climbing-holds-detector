@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+
+# Datasets and model weights — large binaries, never committed
+data/*
+!data/.gitkeep
+models/*
+!models/.gitkeep
+*.pt
+
+# Ultralytics run artifacts (training/val/predict outputs)
+runs/
+
+# OS
+.DS_Store
