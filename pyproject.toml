@@ -9,6 +9,9 @@ dependencies = [
     "numpy>=1.26",
 ]
 
+[project.scripts]
+holds-detect = "holds_detector.cli:main"
+
 [dependency-groups]
 dev = [
     "pytest>=8.0",
