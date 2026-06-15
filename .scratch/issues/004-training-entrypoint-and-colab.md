@@ -2,7 +2,7 @@
 id: 004
 title: Training entrypoint + Colab notebook
 labels: [ready-for-agent]
-status: open
+status: ready-for-human-verification
 blocked_by: [003]
 ---
 
@@ -14,10 +14,10 @@ blocked_by: [003]
 
 ## Acceptance criteria
 
-- [ ] `uv run scripts/train.py --data tests/fixtures/.../dataset.yaml --epochs 2 --imgsz 320` completes locally on MPS/CPU and produces a `best.pt`
+- [x] `uv run scripts/train.py --data tests/fixtures/.../dataset.yaml --epochs 2 --imgsz 320` completes locally on MPS/CPU and produces a `best.pt`
 - [ ] Same script runs unmodified on Colab CUDA **(HUMAN: verified by owner during issue 005's training run)**
 - [ ] Notebook is self-contained: fresh Colab session → trained weights on Drive, with resume-from-checkpoint cell **(HUMAN: same — agent verifies notebook structure only)**
-- [ ] Defaults match PRD §4 (yolo11s-seg, imgsz 1280, single class)
+- [x] Defaults match PRD §4 (yolo11s-seg, imgsz 1280, single class)
 
 ## Human touchpoint
 

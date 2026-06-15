@@ -28,6 +28,9 @@ packages = ["src/holds_detector"]
 [tool.ruff]
 line-length = 100
 src = ["src", "tests", "scripts"]
+# Notebooks mix IPython magics (!cmd, {var}) that aren't valid Python; docs/ holds
+# throwaway chart-generation scripts, not application source.
+extend-exclude = ["notebooks", "docs"]
 
 [tool.ruff.lint]
 select = ["E", "F", "I", "UP", "B"]
