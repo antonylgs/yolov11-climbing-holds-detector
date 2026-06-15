@@ -2,7 +2,7 @@
 id: 003
 title: Dataset preparation — merge sources, single class, seeded split, validation
 labels: [ready-for-agent]
-status: open
+status: done
 blocked_by: [001]
 ---
 
@@ -16,11 +16,11 @@ Create a tiny fixture dataset (a handful of small images + hand-written YOLO-seg
 
 ## Acceptance criteria
 
-- [ ] Running twice with the same seed produces byte-identical splits
-- [ ] Multiple source exports with different class lists merge into one single-class dataset
-- [ ] Validation pass catches each defect type (covered by tests using the fixture dataset)
-- [ ] Emitted `dataset.yaml` trains successfully with Ultralytics on the fixture dataset (1 epoch, smoke-level)
-- [ ] Tests pass via `uv run pytest`
+- [x] Running twice with the same seed produces byte-identical splits
+- [x] Multiple source exports with different class lists merge into one single-class dataset
+- [x] Validation pass catches each defect type (covered by tests using the fixture dataset)
+- [x] Emitted `dataset.yaml` trains successfully with Ultralytics on the fixture dataset (1 epoch, smoke-level)
+- [x] Tests pass via `uv run pytest`
 
 ## Blocked by
 
