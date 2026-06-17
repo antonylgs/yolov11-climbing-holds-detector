@@ -24,6 +24,7 @@ DEFAULT_BASE_WEIGHTS = "yolo11s-seg.pt"  # PRD §4; auto-downloaded by ultralyti
 DEFAULT_EPOCHS = 100
 DEFAULT_IMGSZ = 1280
 DEFAULT_BATCH = 16
+DEFAULT_PATIENCE = 100  # ultralytics default: stop if val mAP doesn't improve for N epochs
 DEFAULT_PROJECT = "runs"  # gitignored; ultralytics auto-increments name → runs/holds, runs/holds2…
 DEFAULT_NAME = "holds"
 
@@ -73,6 +74,7 @@ def train(
     epochs: int = DEFAULT_EPOCHS,
     imgsz: int = DEFAULT_IMGSZ,
     batch: int = DEFAULT_BATCH,
+    patience: int = DEFAULT_PATIENCE,
     device: str | None = None,
     project: str = DEFAULT_PROJECT,
     name: str = DEFAULT_NAME,
@@ -106,6 +108,7 @@ def train(
             epochs=epochs,
             imgsz=imgsz,
             batch=batch,
+            patience=patience,
             device=device,
             project=project,
             name=name,

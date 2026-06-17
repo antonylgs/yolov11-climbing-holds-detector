@@ -23,6 +23,7 @@ from holds_detector.train import (  # noqa: E402
     DEFAULT_EPOCHS,
     DEFAULT_IMGSZ,
     DEFAULT_NAME,
+    DEFAULT_PATIENCE,
     DEFAULT_PROJECT,
     train,
 )
@@ -40,6 +41,12 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--epochs", type=int, default=DEFAULT_EPOCHS)
     parser.add_argument("--imgsz", type=int, default=DEFAULT_IMGSZ)
     parser.add_argument("--batch", type=int, default=DEFAULT_BATCH, help="-1 for CUDA auto-batch")
+    parser.add_argument(
+        "--patience",
+        type=int,
+        default=DEFAULT_PATIENCE,
+        help="early-stop if val mAP doesn't improve for this many epochs",
+    )
     parser.add_argument("--device", default=None, help="cpu|mps|cuda|0; auto-selected if unset")
     parser.add_argument("--project", default=DEFAULT_PROJECT, help="run output dir (gitignored)")
     parser.add_argument("--name", default=DEFAULT_NAME, help="run name under --project")
@@ -71,6 +78,7 @@ def main(argv: list[str] | None = None) -> int:
             epochs=args.epochs,
             imgsz=args.imgsz,
             batch=args.batch,
+            patience=args.patience,
             device=args.device,
             project=args.project,
             name=args.name,
