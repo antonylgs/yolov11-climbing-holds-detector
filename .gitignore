@@ -16,5 +16,17 @@ models/*
 # Ultralytics run artifacts (training/val/predict outputs)
 runs/
 
+# Generated lesson/learnings PDFs + their build output
+*.pdf
+docs/lesson_pdf/
+
+# Local inference outputs (detect.py --debug-image / -o)
+out/
+
+# Local test photos dropped at repo root
+/*.jpg
+/*.jpeg
+/*.png
+
 # OS
 .DS_Store
